@@ -1,4 +1,177 @@
-html {
-  height: 100%;
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Space Grotesk','Inter',;
+  box-sizing:border-box;
+}
+
+:root {
+  /* Core Trio */
+  --bg-midnight: #0D0F12;       /* Black: Mystery & Calm */
+  --accent-orange: #E66027;     /* Orange: Smart & Creativity */
+  --primary-purple: #5B2C6F;    /* Purple: Balance & Premium */
+
+  /* Supporting Neutrals */
+  --surface-slate: #1C1F26;     /* Card/Container Backgrounds */
+  --border-slate: #2E333D;      /* Subtle dividers and card borders */
+  --text-primary: #F4F5F7;      /* High contrast text */
+  --text-muted: #A0A5B1;        /* Secondary/subtle text */
+  --purple-light: #D2B4DE;      /* Hover states and badge backgrounds */
+}
+body{
+  background: var(--bg-midnight);
+  color: var(--text-primary);
+
+}
+#header{
   width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+  url(image/hero-wave-bg.png);
+  background-size: cover;
+  background-position: center;
+}
+.container{
+  padding: 10px 10%;
+  background-color: var(--surface-slate);
+}
+nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.logo{
+  width: 300px;
+  /* padding: 10px; */
+}
+
+nav ul li{
+  display: inline-block; /*to display in one line for nav bar*/
+  list-style: none;
+  margin: 10px 20px;
+  
+}
+
+nav ul li a{
+  color: var(--text-primary);
+  text-decoration: none; /*remove the underline */
+  font-size: 18px;
+  position: relative
+}
+
+nav ul li a::after{
+  content: '';/*add content after each nav word*/
+  width: 0; /*underline width*/
+  height: 3px; /*underline height*/
+  background: var(--accent-orange);
+  position:absolute;
+  left:0;
+  bottom: -6px;
+  transition:0.5s;
+}
+nav ul li a:hover::after{
+  width:100%;
+}
+.header-text{
+  margin-top: 20%;
+  font-size:30px;
+  text-align: center;
+  font-family:'Space Grotesk', sans-serif;
+  color:var(--accent-orange)
+}
+
+.header-text h1{
+  margin-top:20px;
+  font-size: 50px;
+  color:var(--text-primary);
+  font-family:Inter
+
+}
+
+/* ------About------- */
+#about{
+  padding: 80px 0;
+  
+}
+.row{
+  display:flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.about-col-1{
+  flex-basis: 35%;
+  display: flex;
+  justify-content: center; /* Horizontally center the image */
+  align-items: center;     /* Vertically center the image */
+  height: 100%;
+}
+.about-col-1 img{
+  width: 100%;
+  height:auto;
+  /* margin: 50px 50px; */
+  border-radius: 30px;
+}
+.about-col-2{
+  flex-basis: 60%;
+  /* margin: 50px 50px; */
+  /* 1. Turn on Flexbox */
+  display: flex;
+  /* 2. Stack children vertically (heading -> text -> tabs -> content) */
+  flex-direction: column; 
+  /* 3. Vertically center the stacked children */
+  justify-content: center;
+}
+.about-col-2 p{
+  /* font-size:18px; */
+  color:var(--text-muted);
+  
+}
+.sub-title{
+  font-size: 60px;
+  font-weight: 600;
+  color:var(--text-primary)
+}
+.tab-titles{
+  display:flex;
+  margin: 20px 0 40px;
+}
+.tab-links{
+  margin-right:50px;
+  font-size:20px;
+  font-weight: 500;
+  cursor:pointer;
+  position:relative
+
+}
+.tab-links::after{
+  content:'';
+  width:0px;
+  height: 3px;
+  background: var(--purple-light);
+  position:absolute;
+  left:0;
+  bottom: -8px;
+  transition: 0.5s;
+}
+.tab-links.active-link::after{
+  width:50%;
+}
+
+.tab-contents ul li{
+  list-style: none;
+  margin:10px 0;
+
+}
+
+.tab-contents ul li span{
+  color:var(--accent-orange);
+  font-size: 18px;
+}
+
+.tab-contents{
+  display: none;
+}
+.tab-contents.active-tab{
+  display:block;
 }

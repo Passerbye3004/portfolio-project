@@ -3,12 +3,81 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <title>Lee Yun Hao Portifolio</title>
+    <title>Personal Portfolio Website - Hylton Lee Yun Hao</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
   </head>
 
   <body>
-    Hello, my name is Haris.
+    <div id="header">
+      <div class="container">
+        <nav>
+          <img src="image/portfolio_logo.png" alt="portfolio_logo" class="logo">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="header-text">
+        <p>FINTECH SOFTWARE ENGINEER</p>
+        <h1>Hi, I'm 
+          <span style="color:#E66027; font-family:'Space Grotesk'">HYL</span><span style="color:#5B2C6F; font-family:'Space Grotesk'">TON</span><span style="color:#F4F5F7; font-family:'Space Grotesk'"> LEE</span>
+        From Malaysia</h1>
+      </div>
+    </div>
+<!-- ------- About -------- -->
+    <div id="about">
+      <div class="container">
+        <div class="row">
+          <div class="about-col-1">
+            <img src="image/hello.jpg" alt="hello.jpg">
+          </div>
+          <div class="about-col-2">
+            <h1 class="sub-title">About Me</h1>
+            <p>I'm a software developer specialising in financial technology systems, based in Petaling Jaya, Malaysia. 
+              My work centres on backend infrastructure — building the real-time systems, data pipelines, 
+              and operational tools that keep trading platforms running accurately and reliably around the clock.</p>
+
+              <div class="tab-titles">
+                <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                <p class="tab-links" onclick="opentab('education')">Education</p>
+              </div>
+              <div class="tab-contents active-tab" id="skills">
+                <ul>
+                  <li><span>Backend Development</span><br>Expert in Python and asyncio · proficient in REST API integration and web scraping to build reliable backend system for various purpose</li>
+                  <li><span>Trading platform & integrations</span><br>Expert-level MT5 administration and API integration · proficient in bridge configuration and third-party platform connectivity</li>
+                  <li><span>Automated trading strategy</span><br>Proficient in building and testing automated trading strategies in both MT5 and TradingView environments</li>
+                </ul>
+              </div>
+              <div class="tab-contents" id="experience">
+                <ul>
+                  <li><span>Fintech Software Engineer - Champ Resources [2023-Present]</span><br>
+                    Administer and configure trading platform infrastructure including client account settings, pricing parameters, and system tiers for multiple user segments with different trading requirements
+                    <br><br>Design, build, and deploy Python-based backend services integrated with platform APIs for real-time trade monitoring, operational automation, and alert workflows
+                    <br><br>Build and maintain real-time web dashboards and Telegram notification systems used by operations teams for risk monitoring and daily platform oversight</li>
+                </ul>
+              </div>
+              <div class="tab-contents" id="education">
+                <ul>
+                  <li><span>Monash University</span><br>Bachelor Electrical and Computer System Engineering</li>
+                  <li><span>Sigma School</span><br>Complete Software Development Programme (Self-Paced)</li>
+                </ul>
+              </div>
+              
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ------ Services ------ -->
+    div
     <script src="script.js"></script>
   </body>
 </html>
